@@ -1,0 +1,63 @@
+/* style.css - Estilos de GolApp */
+:root { --verde:#1b7a3d; --verde-osc:#0f4d26; --gris:#f3f5f4; --borde:#d5dbd7; --texto:#1d2a22; --rojo:#c0392b; --amarillo:#e0a800; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background:var(--gris); color:var(--texto); }
+.barra { background:var(--verde-osc); color:#fff; display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding:10px 20px; }
+.barra a { color:#fff; text-decoration:none; }
+.logo { font-weight:700; font-size:1.25rem; }
+.barra nav { display:flex; flex-wrap:wrap; gap:4px; flex:1; }
+.barra nav a { padding:6px 10px; border-radius:6px; font-size:.92rem; }
+.barra nav a:hover, .barra nav a.activo { background:rgba(255,255,255,.18); }
+.sesion { display:flex; align-items:center; gap:10px; font-size:.9rem; }
+.contenedor { max-width:1100px; margin:24px auto; padding:0 16px; min-height:70vh; }
+.pie { text-align:center; padding:18px; font-size:.8rem; color:#6b7a70; }
+h1 { margin:0 0 16px; font-size:1.6rem; } h2 { font-size:1.15rem; margin:22px 0 10px; }
+.tarjeta { background:#fff; border:1px solid var(--borde); border-radius:10px; padding:18px; margin-bottom:18px; }
+.rejilla { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin-bottom:18px; }
+.stat { background:#fff; border:1px solid var(--borde); border-radius:10px; padding:16px; }
+.stat b { display:block; font-size:1.7rem; color:var(--verde); } .stat span { font-size:.85rem; color:#5d6b62; }
+table { width:100%; border-collapse:collapse; background:#fff; font-size:.92rem; }
+th, td { padding:9px 10px; border-bottom:1px solid var(--borde); text-align:left; vertical-align:middle; }
+th { background:#e8efe9; font-size:.8rem; text-transform:uppercase; letter-spacing:.03em; }
+.tabla-wrap { overflow-x:auto; border:1px solid var(--borde); border-radius:10px; background:#fff; }
+form.fila { display:flex; flex-wrap:wrap; gap:12px; align-items:end; }
+label { display:block; font-size:.82rem; font-weight:600; margin-bottom:4px; }
+input[type=text], input[type=email], input[type=password], input[type=number], input[type=date], select {
+    width:100%; padding:8px 10px; border:1px solid var(--borde); border-radius:7px; font-size:.95rem; background:#fff; }
+.campo { min-width:160px; flex:1; }
+.btn { display:inline-block; border:0; background:var(--verde); color:#fff; padding:8px 14px; border-radius:7px; cursor:pointer; font-size:.9rem; text-decoration:none; }
+.btn:hover { background:var(--verde-osc); } .btn-sec { background:#4a5a50; } .btn-rojo { background:var(--rojo); }
+.btn-peq { padding:4px 9px; font-size:.8rem; }
+.acciones { display:flex; gap:6px; flex-wrap:wrap; } .acciones form { margin:0; }
+.alerta { padding:11px 14px; border-radius:8px; margin-bottom:16px; font-size:.93rem; }
+.alerta-ok { background:#dff3e6; border:1px solid #9bd3ae; } .alerta-error { background:#fbe1de; border:1px solid #e5a29a; }
+.badge { padding:2px 9px; border-radius:99px; font-size:.75rem; font-weight:600; color:#fff; }
+.badge-pendiente { background:var(--amarillo); } .badge-confirmada { background:var(--verde); }
+.badge-cancelada { background:var(--rojo); } .badge-finalizada { background:#6b7a70; }
+.auth { max-width:420px; margin:40px auto; }
+.pagina-auth {
+    min-height: 100vh;
+    background: #0f4d26 url('../img/fondo-cancha.jpg') center / cover no-repeat fixed;
+}
+.pagina-auth::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 32, 18, 0.45);
+    pointer-events: none;
+    z-index: 0;
+}
+.pagina-auth .barra,
+.pagina-auth .contenedor,
+.pagina-auth .pie { position: relative; z-index: 1; }
+.pagina-auth .barra { background: rgba(15, 77, 38, 0.88); }
+.pagina-auth .pie { color: #e8efe9; }
+.pagina-auth .auth { box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28); }
+.cal td, .cal th { text-align:center; padding:6px; font-size:.82rem; }
+.cal td.libre a { display:block; color:var(--verde-osc); text-decoration:none; background:#e6f5ea; border-radius:5px; padding:6px 0; }
+.cal td.libre a:hover { background:#bfe5ca; }
+.cal td.pendiente { background:#fff1c2; } .cal td.confirmada { background:#f4c7c1; }
+.leyenda { display:flex; gap:14px; font-size:.82rem; margin:8px 0 14px; flex-wrap:wrap; }
+.barra-graf { background:#e3ebe5; border-radius:6px; height:20px; }
+.barra-graf span { display:block; height:100%; background:var(--verde); border-radius:6px; }
+small.ayuda { color:#6b7a70; display:block; margin-top:4px; }
